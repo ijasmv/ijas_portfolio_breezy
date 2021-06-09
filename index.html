@@ -1164,8 +1164,7 @@
 
     <!-- Contact send function -->
     <script>
-      if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])){
-         $("#contact_form").submit((e)=>{
+      $("#contact_form").submit((e)=>{
           e.preventDefault()
           $.ajax({
               url:"https://script.google.com/macros/s/AKfycbwJvkCZkJb7kwY4I9Ia7UrZnz9-_MQ0ifSEg9moQEEzA06A2Eax7ziEwA/exec",
@@ -1182,10 +1181,6 @@
               }
           })
       })
-      }else{
-        alert("Please verify captcha")
-      }
-     
   </script>
   </body>
 </html>
